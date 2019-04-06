@@ -19,3 +19,10 @@ A complete list of options can be shown by running the script with `-h` or `--he
 
 For example: `./main.py -f credentials.txt --chrome -w 10` runs the script with a Chrmome webdriver using the mail and
 password from the file `credentials.txt` on the working directory, and waiting 10 seconds between ads.
+
+## Running with Docker
+
+```
+docker build -f Dockerfile -t autorenueva-milanuncios .
+docker run -ti autorenueva-milanuncios:latest python main.py
+```
