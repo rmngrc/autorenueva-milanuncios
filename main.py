@@ -210,6 +210,9 @@ def main():
     if args.chrome:
         options = webdriver.ChromeOptions()
         options.set_headless(not args.head)
+        options.add_argument('--no-sandbox')
+        options.add_argument('--disable-dev-shm-usage')
+        driver = webdriver.Chrome('/usr/local/bin/chromedriver', chrome_options=options)
         driver = webdriver.Chrome(chrome_options=options)
     else:
         options = webdriver.FirefoxOptions()
